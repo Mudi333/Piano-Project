@@ -1,15 +1,16 @@
-
-import './App.css'
-import Hero from './components/Hero'
-import Navbar from './components/Navbar'
+import { useState } from "react"
+import Navbar from "./components/Navbar"
+import Hero from "./components/Hero"
+import Lessons from "./Pages/Lessons"
 
 function App() {
-
+  const [page, setPage] = useState("home")
 
   return (
     <>
-    <Navbar />
-      <Hero />
+      <Navbar page={page} setPage={setPage} />
+      {page === "home" && <Hero setPage={setPage} />}
+      {page === "lessons" && <Lessons />}
     </>
   )
 }

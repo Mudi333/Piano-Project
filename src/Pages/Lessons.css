@@ -1,0 +1,149 @@
+.lessons {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.lessons h2 {
+  font-size: 32px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.lessons-sub {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 2.5rem;
+}
+
+.lessons-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 3rem;
+}
+
+.lesson-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: left;
+  position: relative;
+}
+
+.lesson-card.featured {
+  border: 2px solid #111;
+}
+
+.badge {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.lesson-card h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.lesson-price {
+  font-size: 28px;
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.lesson-price span {
+  font-size: 15px;
+  font-weight: 400;
+  color: #888;
+}
+
+.lesson-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  color: #555;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.lesson-card ul li::before {
+  content: "✓  ";
+  color: #111;
+}
+
+.lesson-card .btn-primary,
+.lesson-card .btn-secondary {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+}
+
+.lesson-card .btn-primary {
+  background: #111;
+  color: #fff;
+}
+
+.lesson-card .btn-secondary {
+  background: #eee;
+  color: #333;
+}
+
+/* Steps section */
+.lessons-steps {
+  text-align: left;
+  border-top: 1px solid #eee;
+  padding-top: 2.5rem;
+}
+
+.lessons-steps h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 16px;
+}
+
+.step {
+  background: #f8f8f8;
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+
+.step span {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: #111;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 28px;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
