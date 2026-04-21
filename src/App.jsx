@@ -11,6 +11,7 @@ function App() {
       <Navbar page={page} setPage={setPage} />
       {page === "home" && <Hero setPage={setPage} />}
       {page === "lessons" && <Lessons />}
+      <h1>Piano App</h1>
     </>
   )
 }
