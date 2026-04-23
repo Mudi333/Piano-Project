@@ -1,17 +1,37 @@
-import React from 'react'
-import "./Navbar.css"
+import { Link, useLocation } from "react-router-dom";
+import "./Navbar.css";
 
-function Navbar({ page, setPage }) {
+function Navbar() {
+  const location = useLocation();
+
   return (
-    <nav className='navbar'>
-      <span className='navbar-logo'>Claire Harmon Piano</span>
-      <div className='navbar-links'>
-        <a href="#" className={page === 'home' ? 'active' : ''} onClick={() => setPage('home')}>Home</a>
-        <a href="#" className={page === 'lessons' ? 'active' : ''} onClick={() => setPage('lessons')}>Lessons</a>
-        <a href="#" className={page === 'contact' ? 'active' : ''} onClick={() => setPage('contact')}>Contact</a>
+    <nav className="navbar">
+      <span className="navbar-logo">Claire Harmon Piano</span>
+
+      <div className="navbar-links">
+        <Link
+          to="/"
+          className={location.pathname === "/" ? "active" : ""}
+        >
+          Home
+        </Link>
+
+        <Link
+          to="/lessons"
+          className={location.pathname === "/lessons" ? "active" : ""}
+        >
+          Lessons
+        </Link>
+
+        <Link
+          to="/contact"
+          className={location.pathname === "/contact" ? "active" : ""}
+        >
+          Contact
+        </Link>
       </div>
     </nav>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

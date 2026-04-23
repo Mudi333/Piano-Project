@@ -1,19 +1,23 @@
-import { useState } from "react"
-import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
-import Lessons from "./Pages/Lessons"
+import Navbar from "./components/Navbar";
+// import Hero from "./components/Hero";
+import Lessons from "./Pages/Lessons";
+// import Contact from "./Pages/Contact";
+import Booking from "./Pages/Booking";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  const [page, setPage] = useState("home")
-
   return (
-    <>
-      <Navbar page={page} setPage={setPage} />
-      {page === "home" && <Hero setPage={setPage} />}
-      {page === "lessons" && <Lessons />}
-      <h1>Piano App</h1>
-    </>
-  )
+    <BrowserRouter>
+      <Navbar />
+
+      <Routes>
+        {/* <Route path="/" element={<Hero />} /> */}
+        <Route path="/lessons" element={<Lessons />} />
+        {/* <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/booking" element={<Booking />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
