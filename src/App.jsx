@@ -1,6 +1,8 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Lessons from "./Pages/Lessons";
+import Contact from "./Pages/Contact";
+
 // import Contact from "./Pages/Contact";
 import Booking from "./Pages/Booking";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -15,6 +17,7 @@ function App() {
         <Route path="/lessons" element={<Lessons />} />
         {/* <Route path="/contact" element={<Contact />} /> */}
         <Route path="/booking" element={<Booking />} />
+         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );
